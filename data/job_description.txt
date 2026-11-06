@@ -1,0 +1,22 @@
+Software Developer Intern
+
+We are looking for a motivated Software Developer Intern with strong programming and problem-solving skills.
+
+Required skills:
+
+Python
+Java
+C++
+Data Structures and Algorithms
+SQL
+MySQL
+Git
+GitHub
+HTML
+CSS
+JavaScript
+Machine Learning
+FastAPI
+REST API
+
+The candidate should have a good understanding of software development, databases, web development, and machine learning.
