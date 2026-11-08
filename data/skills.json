@@ -1,0 +1,412 @@
+{
+  "python": {
+    "aliases": [
+      "python",
+      "python3"
+    ],
+    "weight": 5,
+    "hours": 40,
+    "category": "Programming",
+    "resource": "https://docs.python.org/3/tutorial/"
+  },
+  "java": {
+    "aliases": [
+      "java"
+    ],
+    "weight": 5,
+    "hours": 60,
+    "category": "Programming",
+    "resource": "https://dev.java/learn/"
+  },
+  "c++": {
+    "aliases": [
+      "c++",
+      "cpp"
+    ],
+    "weight": 4,
+    "hours": 60,
+    "category": "Programming",
+    "resource": "https://en.cppreference.com/"
+  },
+  "javascript": {
+    "aliases": [
+      "javascript",
+      "java script",
+      "js",
+      "es6"
+    ],
+    "weight": 4,
+    "hours": 40,
+    "category": "Programming",
+    "resource": "https://developer.mozilla.org/en-US/docs/Web/JavaScript"
+  },
+  "typescript": {
+    "aliases": [
+      "typescript",
+      "ts"
+    ],
+    "weight": 3,
+    "hours": 25,
+    "category": "Programming",
+    "resource": "https://www.typescriptlang.org/docs/"
+  },
+  "html": {
+    "aliases": [
+      "html5",
+      "html"
+    ],
+    "weight": 2,
+    "hours": 10,
+    "category": "Frontend",
+    "resource": "https://developer.mozilla.org/en-US/docs/Learn/HTML"
+  },
+  "css": {
+    "aliases": [
+      "css3",
+      "css"
+    ],
+    "weight": 2,
+    "hours": 15,
+    "category": "Frontend",
+    "resource": "https://developer.mozilla.org/en-US/docs/Learn/CSS"
+  },
+  "react": {
+    "aliases": [
+      "react.js",
+      "reactjs",
+      "react"
+    ],
+    "weight": 4,
+    "hours": 30,
+    "category": "Frontend",
+    "resource": "https://react.dev/learn"
+  },
+  "node.js": {
+    "aliases": [
+      "node.js",
+      "nodejs"
+    ],
+    "weight": 4,
+    "hours": 25,
+    "category": "Backend",
+    "resource": "https://nodejs.org/en/learn"
+  },
+  "flask": {
+    "aliases": [
+      "flask"
+    ],
+    "weight": 3,
+    "hours": 15,
+    "category": "Backend",
+    "resource": "https://flask.palletsprojects.com/"
+  },
+  "django": {
+    "aliases": [
+      "django"
+    ],
+    "weight": 3,
+    "hours": 25,
+    "category": "Backend",
+    "resource": "https://docs.djangoproject.com/"
+  },
+  "fastapi": {
+    "aliases": [
+      "fastapi",
+      "fast api"
+    ],
+    "weight": 4,
+    "hours": 15,
+    "category": "Backend",
+    "resource": "https://fastapi.tiangolo.com/tutorial/"
+  },
+  "rest api": {
+    "aliases": [
+      "rest apis",
+      "rest api",
+      "restful api",
+      "restful apis",
+      "api development"
+    ],
+    "weight": 4,
+    "hours": 15,
+    "category": "Backend",
+    "resource": "https://restfulapi.net/"
+  },
+  "sql": {
+    "aliases": [
+      "sql"
+    ],
+    "weight": 4,
+    "hours": 20,
+    "category": "Database",
+    "resource": "https://www.postgresql.org/docs/current/tutorial.html"
+  },
+  "mysql": {
+    "aliases": [
+      "mysql"
+    ],
+    "weight": 3,
+    "hours": 15,
+    "category": "Database",
+    "resource": "https://dev.mysql.com/doc/"
+  },
+  "postgresql": {
+    "aliases": [
+      "postgresql",
+      "postgres"
+    ],
+    "weight": 3,
+    "hours": 15,
+    "category": "Database",
+    "resource": "https://www.postgresql.org/docs/current/tutorial.html"
+  },
+  "mongodb": {
+    "aliases": [
+      "mongodb",
+      "mongo db"
+    ],
+    "weight": 3,
+    "hours": 15,
+    "category": "Database",
+    "resource": "https://learn.mongodb.com/"
+  },
+  "git": {
+    "aliases": [
+      "git",
+      "version control"
+    ],
+    "weight": 3,
+    "hours": 8,
+    "category": "Tools",
+    "resource": "https://git-scm.com/doc"
+  },
+  "github": {
+    "aliases": [
+      "github"
+    ],
+    "weight": 2,
+    "hours": 5,
+    "category": "Tools",
+    "resource": "https://docs.github.com/en/get-started"
+  },
+  "docker": {
+    "aliases": [
+      "docker",
+      "containerization",
+      "containers"
+    ],
+    "weight": 4,
+    "hours": 15,
+    "category": "DevOps",
+    "resource": "https://docs.docker.com/get-started/"
+  },
+  "kubernetes": {
+    "aliases": [
+      "kubernetes",
+      "k8s"
+    ],
+    "weight": 3,
+    "hours": 30,
+    "category": "DevOps",
+    "resource": "https://kubernetes.io/docs/tutorials/"
+  },
+  "aws": {
+    "aliases": [
+      "amazon web services",
+      "aws"
+    ],
+    "weight": 4,
+    "hours": 30,
+    "category": "Cloud",
+    "resource": "https://aws.amazon.com/getting-started/"
+  },
+  "azure": {
+    "aliases": [
+      "microsoft azure",
+      "azure"
+    ],
+    "weight": 3,
+    "hours": 30,
+    "category": "Cloud",
+    "resource": "https://learn.microsoft.com/en-us/azure/"
+  },
+  "linux": {
+    "aliases": [
+      "linux",
+      "unix"
+    ],
+    "weight": 3,
+    "hours": 15,
+    "category": "Tools",
+    "resource": "https://linuxjourney.com/"
+  },
+  "ci/cd": {
+    "aliases": [
+      "ci/cd",
+      "ci cd",
+      "continuous integration",
+      "continuous delivery",
+      "github actions",
+      "jenkins"
+    ],
+    "weight": 3,
+    "hours": 12,
+    "category": "DevOps",
+    "resource": "https://docs.github.com/en/actions"
+  },
+  "machine learning": {
+    "aliases": [
+      "machine learning",
+      "ml",
+      "machine-learning",
+      "scikit-learn",
+      "scikit learn",
+      "sklearn"
+    ],
+    "weight": 5,
+    "hours": 60,
+    "category": "AI/ML",
+    "resource": "https://scikit-learn.org/stable/user_guide.html"
+  },
+  "deep learning": {
+    "aliases": [
+      "deep learning",
+      "tensorflow",
+      "pytorch",
+      "keras"
+    ],
+    "weight": 4,
+    "hours": 80,
+    "category": "AI/ML",
+    "resource": "https://pytorch.org/tutorials/"
+  },
+  "nlp": {
+    "aliases": [
+      "natural language processing",
+      "nlp"
+    ],
+    "weight": 4,
+    "hours": 35,
+    "category": "AI/ML",
+    "resource": "https://huggingface.co/learn/nlp-course/"
+  },
+  "pandas": {
+    "aliases": [
+      "pandas"
+    ],
+    "weight": 3,
+    "hours": 15,
+    "category": "Data",
+    "resource": "https://pandas.pydata.org/docs/getting_started/"
+  },
+  "numpy": {
+    "aliases": [
+      "numpy"
+    ],
+    "weight": 3,
+    "hours": 12,
+    "category": "Data",
+    "resource": "https://numpy.org/learn/"
+  },
+  "data structures and algorithms": {
+    "aliases": [
+      "data structures and algorithms",
+      "data structures",
+      "algorithms",
+      "dsa"
+    ],
+    "weight": 4,
+    "hours": 80,
+    "category": "CS Fundamentals",
+    "resource": "https://neetcode.io/roadmap"
+  },
+  "oop": {
+    "aliases": [
+      "object oriented programming",
+      "object-oriented programming",
+      "oop"
+    ],
+    "weight": 3,
+    "hours": 12,
+    "category": "CS Fundamentals",
+    "resource": "https://realpython.com/python3-object-oriented-programming/"
+  },
+  "testing": {
+    "aliases": [
+      "unit testing",
+      "pytest",
+      "junit",
+      "jest",
+      "automated testing",
+      "software testing"
+    ],
+    "weight": 3,
+    "hours": 10,
+    "category": "Practices",
+    "resource": "https://docs.pytest.org/"
+  },
+  "agile": {
+    "aliases": [
+      "agile",
+      "scrum",
+      "kanban"
+    ],
+    "weight": 2,
+    "hours": 5,
+    "category": "Practices",
+    "resource": "https://www.atlassian.com/agile"
+  },
+  "communication": {
+    "aliases": [
+      "communication skills",
+      "verbal communication",
+      "written communication"
+    ],
+    "weight": 2,
+    "hours": 8,
+    "category": "Soft Skills",
+    "resource": "https://www.coursera.org/articles/communication-skills"
+  },
+  "problem solving": {
+    "aliases": [
+      "problem solving",
+      "analytical skills",
+      "analytical thinking"
+    ],
+    "weight": 3,
+    "hours": 15,
+    "category": "Soft Skills",
+    "resource": "https://www.khanacademy.org/"
+  },
+  "spring boot": {
+    "aliases": [
+      "spring boot"
+    ],
+    "weight": 4,
+    "hours": 40,
+    "category": "Backend",
+    "resource": "https://spring.io/guides"
+  },
+  "c#": {
+    "aliases": [
+      "c#",
+      "c sharp",
+      "c-sharp"
+    ],
+    "weight": 4,
+    "hours": 45,
+    "category": "Programming",
+    "resource": "https://learn.microsoft.com/en-us/dotnet/csharp/"
+  },
+  ".net": {
+    "aliases": [
+      ".net",
+      "dotnet",
+      "asp.net"
+    ],
+    "weight": 4,
+    "hours": 35,
+    "category": "Backend",
+    "resource": "https://learn.microsoft.com/en-us/dotnet/"
+  }
+}

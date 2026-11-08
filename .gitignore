@@ -1,0 +1,24 @@
+venv/
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.env
+.DS_Store
+.vscode/
+data/uploads/*
+!data/uploads/.gitkeep
+evaluation/local_*.csv
+
+# Logs and test coverage
+*.log
+.coverage
+htmlcov/
+
+# Build artifacts
+build/
+dist/
+*.egg-info/
+
+# Local application data
+instance/

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Smart Resume–Job Matcher</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="/">Smart Resume<span>–</span>Job Matcher</a>
+    <div class="top-actions">
+      <span class="privacy">Private analysis · Resume is not stored</span>
+      <button id="themeToggle" class="theme-toggle" type="button" aria-label="Toggle dark mode">◐</button>
+    </div>
+  </header>
+
+  <div id="analysisLoader" class="analysis-loader hidden" aria-live="polite" aria-label="Analyzing resume">
+    <div class="loader-card">
+      <div class="loader-orbit"><span></span><i></i></div>
+      <p class="eyebrow">CAREER INTELLIGENCE ENGINE</p>
+      <h2>Connecting your experience to the role</h2>
+      <p id="loaderStatus" class="muted">Reading resume content…</p>
+      <div class="loader-track"><span></span></div>
+      <div class="loader-steps"><span class="active">Extract</span><span>Understand</span><span>Compare</span><span>Report</span></div>
+    </div>
+  </div>
+
+  <main class="shell">
+    <section class="hero reveal">
+      <div class="hero-orb orb-one"></div><div class="hero-orb orb-two"></div>
+      <p class="eyebrow">CAREER INTELLIGENCE</p>
+      <h1>Know how well your resume fits the role.</h1>
+      <p class="hero-copy">Compare your experience with a job description using skill analysis and NLP-based semantic similarity. Get a clear score, explainable skill gaps and a practical learning roadmap.</p>
+    </section>
+
+    <section class="panel input-panel reveal">
+      <form id="analysisForm">
+        <div class="input-grid">
+          <div>
+            <label class="field-label" for="resume">01 / Upload your resume</label>
+            <label class="dropzone" id="dropzone" for="resume">
+              <input id="resume" name="resume" type="file" accept="application/pdf,.pdf" hidden>
+              <span class="upload-symbol">↑</span>
+              <strong id="fileLabel">Drop your PDF here or browse</strong>
+              <small>PDF only · Maximum 5 MB</small>
+            </label>
+          </div>
+          <div>
+            <label class="field-label" for="jobDescription">02 / Paste the job description</label>
+            <textarea id="jobDescription" name="job_description" maxlength="20000" placeholder="Paste the complete job description, including responsibilities, required skills and preferred qualifications..." required></textarea>
+            <div class="textarea-meta"><span id="charCount">0 characters</span><span>30–20,000 characters</span></div>
+          </div>
+        </div>
+        <div class="form-footer">
+          <p>Your PDF is processed in memory and is not saved by this application.</p>
+          <div class="form-actions"><button id="clearForm" class="secondary-btn" type="button">Clear</button><button id="analyzeBtn" class="primary-btn" type="submit">Analyze compatibility <span>→</span></button></div>
+        </div>
+        <p id="errorMessage" class="error-message" role="alert"></p>
+      </form>
+    </section>
+
+    <section id="results" class="results hidden" aria-live="polite">
+      <div class="section-heading">
+        <div><p class="eyebrow">YOUR ANALYSIS</p><h2>Compatibility report</h2></div>
+        <button id="downloadReport" class="secondary-btn" type="button">↓ Download PDF report</button>
+      </div>
+
+      <div class="overview-grid">
+        <article class="panel score-panel">
+          <div class="score-gauge-wrap">
+            <canvas id="scoreGauge" aria-label="Overall compatibility gauge"></canvas>
+            <div class="gauge-center"><strong id="overallScore">0</strong><span>COMPATIBILITY</span></div>
+          </div>
+          <div class="score-copy">
+            <p class="eyebrow">OVERALL FIT</p>
+            <h3 id="verdict">Analysis complete</h3>
+            <p id="disclaimer" class="muted"></p>
+            <p id="methodNote" class="method-note"></p>
+          </div>
+        </article>
+        <article class="panel breakdown-panel">
+          <div class="panel-heading"><h3>Score breakdown</h3><span class="muted">0–100</span></div>
+          <canvas id="breakdownChart" height="190"></canvas>
+          <div id="weightNote" class="muted tiny"></div>
+        </article>
+      </div>
+
+      <div id="warnings" class="notice-list"></div>
+
+      <div class="content-grid">
+        <article class="panel">
+          <div class="panel-heading"><h3>Matched skills</h3><span id="matchedCount" class="count-pill">0</span></div>
+          <p class="muted small">Demonstrated skills receive full credit; foundational knowledge receives partial credit.</p>
+          <div id="matchedSkills" class="chips"></div>
+        </article>
+        <article class="panel">
+          <div class="panel-heading"><h3>Skill gaps & learning roadmap</h3><span id="missingCount" class="count-pill">0</span></div>
+          <p class="muted small">Prioritized by their estimated contribution to the skill score.</p>
+          <div id="missingSkills" class="gap-list"></div>
+        </article>
+      </div>
+
+      <article class="panel" id="developingPanel" hidden style="margin-top:18px">
+        <div class="panel-heading"><h3>Skills currently being learned</h3><span id="developingCount" class="count-pill">0</span></div>
+        <p class="muted small">These skills are recognized as in progress, not yet demonstrated. They do not receive skill-match credit.</p>
+        <div id="developingSkills" class="chips"></div>
+      </article>
+
+      <article class="panel simulator-panel">
+        <div class="panel-heading"><div><p class="eyebrow">PLAN YOUR NEXT MOVE</p><h3>What-if skill simulator</h3></div><span class="sim-badge">Illustrative estimate</span></div>
+        <p class="muted small">Select the skills you plan to learn. The projected score estimates the contribution of those gaps if you can demonstrate the skills in your resume. It is not a guaranteed outcome.</p>
+        <div class="projection-row"><div><span class="muted small">Current score</span><strong id="currentProjection">0%</strong></div><div><span class="muted small">Projected score</span><strong id="projectedScore">0%</strong></div></div>
+        <div class="progress-track"><div id="projectionBar" class="progress-fill"></div></div>
+      </article>
+
+      <div class="content-grid">
+        <article class="panel">
+          <div class="panel-heading"><h3>Resume quality suggestions</h3></div>
+          <div id="resumeQuality" class="suggestion-list"></div>
+        </article>
+        <article class="panel">
+          <div class="panel-heading"><h3>Experience & education</h3></div>
+          <div id="profileChecks" class="profile-checks"></div>
+        </article>
+      </div>
+    </section>
+
+    <footer class="page-footer">
+      <strong>Smart Resume–Job Matcher</strong>
+      <p>A decision-support tool for career planning — not an automated hiring decision-maker.</p>
+    </footer>
+  </main>
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

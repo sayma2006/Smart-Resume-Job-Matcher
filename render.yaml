@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: smart-resume-job-matcher
+    runtime: python
+    buildCommand: pip install -r requirements-prod.txt
+    startCommand: gunicorn app:app
+    envVars:
+      - key: FLASK_DEBUG
+        value: "0"
+      - key: MAX_CONTENT_LENGTH_MB
+        value: "5"
