@@ -7,6 +7,8 @@ const analyzeBtn = document.getElementById("analyzeBtn");
 const errorMessage = document.getElementById("errorMessage");
 let gaugeChart = null;
 let breakdownChart = null;
+let categoryRadarChart = null;
+let lastCategories = {};
 let baseScore = 0;
 let recommendations = [];
 let loaderTimer = null;
@@ -56,6 +58,7 @@ themeToggle.addEventListener("click", () => {
   document.body.classList.toggle("dark");
   localStorage.setItem("srjm-theme", document.body.classList.contains("dark") ? "dark" : "light");
   if (baseScore) drawGauge(baseScore);
+  if (Object.keys(lastCategories).length) drawCategoryRadar(lastCategories);
 });
 
 function showLoader() {
@@ -141,6 +144,7 @@ function renderResults(result) {
 
   drawGauge(result.overall);
   drawBreakdown(result.breakdown, result.weights_used);
+  drawCategoryRadar(result.categories || {});
   renderMatched(result.matched || []);
   renderDeveloping(result.developing || []);
   renderMissing(recommendations);
@@ -212,6 +216,87 @@ function drawBreakdown(breakdown, weights) {
   }
   document.getElementById("weightNote").textContent = `Normalized component weights: ${Object.entries(weights || {}).map(([key, value]) => `${key} ${Math.round(value * 100)}%`).join(" · ")}`;
 }
+function drawCategoryRadar(categories) {
+  lastCategories = categories || {};
+  const entries = Object.entries(lastCategories);
+  const canvas = document.getElementById("categoryRadarChart");
+  const emptyMessage = document.getElementById("radarEmpty");
+  if (categoryRadarChart) {
+    categoryRadarChart.destroy();
+    categoryRadarChart = null;
+  }
+  if (!entries.length || typeof Chart === "undefined") {
+    canvas.classList.add("hidden");
+    emptyMessage.classList.remove("hidden");
+    emptyMessage.textContent = entries.length
+      ? "The chart library is unavailable. Refresh the page to try again."
+      : "No categorized skills were detected in this job description.";
+    return;
+  }
+
+  canvas.classList.remove("hidden");
+  emptyMessage.classList.add("hidden");
+  const dark = document.body.classList.contains("dark");
+  const labels = entries.map(([category]) =>
+    category.replace(/[_-]+/g, " ").replace(/\b\w/g, letter => letter.toUpperCase())
+  );
+  const values = entries.map(([, value]) => Number(value));
+
+  categoryRadarChart = new Chart(canvas, {
+    type: "radar",
+    data: {
+      labels,
+      datasets: [{
+        label: "Skill coverage",
+        data: values,
+        backgroundColor: "rgba(242, 140, 40, 0.20)",
+        borderColor: "#f28c28",
+        pointBackgroundColor: "#e49a36",
+        pointBorderColor: dark ? "#182238" : "#ffffff",
+        pointHoverBackgroundColor: "#ffffff",
+        pointHoverBorderColor: "#f28c28",
+        borderWidth: 2,
+        pointRadius: 4
+      }]
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      animation: { duration: 900, easing: "easeOutQuart" },
+      scales: {
+        r: {
+          beginAtZero: true,
+          min: 0,
+          max: 100,
+          ticks: {
+            stepSize: 20,
+            color: dark ? "#a7b1c3" : "#697386",
+            backdropColor: "transparent",
+            callback: value => value + "%"
+          },
+          grid: { color: dark ? "rgba(167,177,195,.18)" : "rgba(105,115,134,.18)" },
+          angleLines: { color: dark ? "rgba(167,177,195,.2)" : "rgba(105,115,134,.2)" },
+          pointLabels: {
+            color: dark ? "#edf2fa" : "#172033",
+            font: { size: 11, weight: "600" }
+          }
+        }
+      },
+      plugins: {
+        legend: {
+          display: true,
+          labels: { color: dark ? "#edf2fa" : "#172033", usePointStyle: true }
+        },
+        tooltip: {
+          callbacks: {
+            label: context => `Skill coverage: ${Number(context.raw).toFixed(1)}%`
+          }
+        }
+      }
+    }
+  });
+}
+
 function renderMatched(items) {
   const container = document.getElementById("matchedSkills");
   container.replaceChildren();
