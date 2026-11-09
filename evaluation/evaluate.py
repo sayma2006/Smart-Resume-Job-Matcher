@@ -24,6 +24,7 @@ def main():
         raise SystemExit(f"CSV not found: {path}")
 
     human, model = [], []
+    scores_by_label = {label: [] for label in LABEL_SCORE}
     with path.open("r", encoding="utf-8-sig", newline="") as handle:
         reader = csv.DictReader(handle)
         required = {"resume_text", "job_description", "label"}
@@ -35,13 +36,25 @@ def main():
                 raise SystemExit(f"Invalid label on CSV row {row_number}: {label!r}")
             result = analyze(row.get("resume_text", ""), row.get("job_description", ""))
             human.append(LABEL_SCORE[label])
-            model.append(float(result["overall"]))
+            score = float(result["overall"])
+            model.append(score)
+            scores_by_label[label].append(score)
 
     if len(human) < 3:
         raise SystemExit("Add at least 3 labelled pairs; 20–30 or more are recommended.")
     correlation = spearmanr(human, model)
     print(f"Pairs evaluated: {len(human)}")
-    print(f"Spearman rank correlation: {correlation.statistic:.3f}")
+    print("Mean model score by human label:")
+    for label in LABEL_SCORE:
+        scores = scores_by_label[label]
+        if scores:
+            print(f"  {label}: {sum(scores) / len(scores):.1f}% ({len(scores)} pairs)")
+        else:
+            print(f"  {label}: no examples")
+    if correlation.statistic == correlation.statistic:
+        print(f"Spearman rank correlation: {correlation.statistic:.3f}")
+    else:
+        print("Spearman rank correlation: undefined (labels or scores have no rank variation)")
     print("Interpret this cautiously: a small, subjective dataset is not proof of hiring accuracy.")
 
 
