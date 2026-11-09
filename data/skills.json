@@ -245,9 +245,7 @@
       "ci/cd",
       "ci cd",
       "continuous integration",
-      "continuous delivery",
-      "github actions",
-      "jenkins"
+      "continuous delivery"
     ],
     "weight": 3,
     "hours": 12,
@@ -270,10 +268,7 @@
   },
   "deep learning": {
     "aliases": [
-      "deep learning",
-      "tensorflow",
-      "pytorch",
-      "keras"
+      "deep learning"
     ],
     "weight": 4,
     "hours": 80,
@@ -311,7 +306,6 @@
   "data structures and algorithms": {
     "aliases": [
       "data structures and algorithms",
-      "data structures",
       "algorithms",
       "dsa"
     ],
@@ -334,9 +328,7 @@
   "testing": {
     "aliases": [
       "unit testing",
-      "pytest",
       "junit",
-      "jest",
       "automated testing",
       "software testing"
     ],
@@ -1196,15 +1188,6 @@
     "hours": 30,
     "category": "Cloud",
     "resource": "https://cloud.google.com/docs"
-  },
-  "microsoft azure": {
-    "aliases": [
-      "azure cloud"
-    ],
-    "weight": 3,
-    "hours": 30,
-    "category": "Cloud",
-    "resource": "https://learn.microsoft.com/en-us/azure/"
   },
   "terraform": {
     "aliases": [
