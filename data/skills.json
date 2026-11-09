@@ -408,5 +408,1122 @@
     "hours": 35,
     "category": "Backend",
     "resource": "https://learn.microsoft.com/en-us/dotnet/"
+  },
+  "go": {
+    "aliases": [
+      "golang"
+    ],
+    "weight": 4,
+    "hours": 35,
+    "category": "Programming",
+    "resource": "https://go.dev/learn/"
+  },
+  "rust": {
+    "aliases": [
+      "rust lang"
+    ],
+    "weight": 3,
+    "hours": 50,
+    "category": "Programming",
+    "resource": "https://www.rust-lang.org/learn"
+  },
+  "kotlin": {
+    "aliases": [
+      "kotlin"
+    ],
+    "weight": 3,
+    "hours": 35,
+    "category": "Programming",
+    "resource": "https://kotlinlang.org/docs/home.html"
+  },
+  "swift": {
+    "aliases": [
+      "swift"
+    ],
+    "weight": 3,
+    "hours": 35,
+    "category": "Programming",
+    "resource": "https://www.swift.org/documentation/"
+  },
+  "php": {
+    "aliases": [
+      "php"
+    ],
+    "weight": 3,
+    "hours": 25,
+    "category": "Programming",
+    "resource": "https://www.php.net/manual/en/"
+  },
+  "ruby": {
+    "aliases": [
+      "ruby"
+    ],
+    "weight": 3,
+    "hours": 25,
+    "category": "Programming",
+    "resource": "https://www.ruby-lang.org/en/documentation/"
+  },
+  "r": {
+    "aliases": [
+      "r language"
+    ],
+    "weight": 3,
+    "hours": 25,
+    "category": "Programming",
+    "resource": "https://www.r-project.org/"
+  },
+  "bash": {
+    "aliases": [
+      "bash scripting",
+      "shell scripting"
+    ],
+    "weight": 3,
+    "hours": 15,
+    "category": "Tools",
+    "resource": "https://www.gnu.org/software/bash/manual/"
+  },
+  "powershell": {
+    "aliases": [
+      "powershell"
+    ],
+    "weight": 3,
+    "hours": 15,
+    "category": "Tools",
+    "resource": "https://learn.microsoft.com/en-us/powershell/"
+  },
+  "scala": {
+    "aliases": [
+      "scala"
+    ],
+    "weight": 3,
+    "hours": 35,
+    "category": "Programming",
+    "resource": "https://docs.scala-lang.org/"
+  },
+  "matlab": {
+    "aliases": [
+      "matlab"
+    ],
+    "weight": 2,
+    "hours": 25,
+    "category": "Programming",
+    "resource": "https://www.mathworks.com/help/matlab/"
+  },
+  "assembly language": {
+    "aliases": [
+      "assembly",
+      "asm"
+    ],
+    "weight": 2,
+    "hours": 45,
+    "category": "CS Fundamentals",
+    "resource": "https://godbolt.org/"
+  },
+  "next.js": {
+    "aliases": [
+      "nextjs",
+      "next js"
+    ],
+    "weight": 4,
+    "hours": 30,
+    "category": "Frontend",
+    "resource": "https://nextjs.org/docs"
+  },
+  "angular": {
+    "aliases": [
+      "angular"
+    ],
+    "weight": 3,
+    "hours": 35,
+    "category": "Frontend",
+    "resource": "https://angular.dev/overview"
+  },
+  "vue.js": {
+    "aliases": [
+      "vue",
+      "vuejs",
+      "vue js"
+    ],
+    "weight": 3,
+    "hours": 25,
+    "category": "Frontend",
+    "resource": "https://vuejs.org/guide/"
+  },
+  "svelte": {
+    "aliases": [
+      "svelte"
+    ],
+    "weight": 2,
+    "hours": 20,
+    "category": "Frontend",
+    "resource": "https://svelte.dev/docs"
+  },
+  "bootstrap": {
+    "aliases": [
+      "bootstrap css"
+    ],
+    "weight": 2,
+    "hours": 8,
+    "category": "Frontend",
+    "resource": "https://getbootstrap.com/docs/"
+  },
+  "tailwind css": {
+    "aliases": [
+      "tailwind",
+      "tailwindcss"
+    ],
+    "weight": 3,
+    "hours": 12,
+    "category": "Frontend",
+    "resource": "https://tailwindcss.com/docs"
+  },
+  "sass": {
+    "aliases": [
+      "scss"
+    ],
+    "weight": 2,
+    "hours": 10,
+    "category": "Frontend",
+    "resource": "https://sass-lang.com/guide/"
+  },
+  "webpack": {
+    "aliases": [
+      "webpack"
+    ],
+    "weight": 2,
+    "hours": 12,
+    "category": "Frontend",
+    "resource": "https://webpack.js.org/concepts/"
+  },
+  "vite": {
+    "aliases": [
+      "vite"
+    ],
+    "weight": 2,
+    "hours": 8,
+    "category": "Frontend",
+    "resource": "https://vite.dev/guide/"
+  },
+  "jquery": {
+    "aliases": [
+      "jquery"
+    ],
+    "weight": 2,
+    "hours": 10,
+    "category": "Frontend",
+    "resource": "https://learn.jquery.com/"
+  },
+  "web accessibility": {
+    "aliases": [
+      "accessibility",
+      "wcag",
+      "a11y"
+    ],
+    "weight": 3,
+    "hours": 12,
+    "category": "Frontend",
+    "resource": "https://www.w3.org/WAI/fundamentals/"
+  },
+  "responsive design": {
+    "aliases": [
+      "mobile first design"
+    ],
+    "weight": 3,
+    "hours": 10,
+    "category": "Frontend",
+    "resource": "https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Responsive_Design"
+  },
+  "express.js": {
+    "aliases": [
+      "express",
+      "expressjs"
+    ],
+    "weight": 3,
+    "hours": 15,
+    "category": "Backend",
+    "resource": "https://expressjs.com/en/starter/installing.html"
+  },
+  "nestjs": {
+    "aliases": [
+      "nest.js",
+      "nest js"
+    ],
+    "weight": 3,
+    "hours": 25,
+    "category": "Backend",
+    "resource": "https://docs.nestjs.com/"
+  },
+  "ruby on rails": {
+    "aliases": [
+      "rails"
+    ],
+    "weight": 2,
+    "hours": 35,
+    "category": "Backend",
+    "resource": "https://guides.rubyonrails.org/"
+  },
+  "laravel": {
+    "aliases": [
+      "laravel"
+    ],
+    "weight": 3,
+    "hours": 25,
+    "category": "Backend",
+    "resource": "https://laravel.com/docs"
+  },
+  "graphql": {
+    "aliases": [
+      "graph ql"
+    ],
+    "weight": 3,
+    "hours": 18,
+    "category": "Backend",
+    "resource": "https://graphql.org/learn/"
+  },
+  "websockets": {
+    "aliases": [
+      "web socket",
+      "web socket protocol"
+    ],
+    "weight": 3,
+    "hours": 12,
+    "category": "Backend",
+    "resource": "https://developer.mozilla.org/en-US/docs/Web/API/WebSockets_API"
+  },
+  "grpc": {
+    "aliases": [
+      "g rpc"
+    ],
+    "weight": 3,
+    "hours": 20,
+    "category": "Backend",
+    "resource": "https://grpc.io/docs/"
+  },
+  "microservices": {
+    "aliases": [
+      "microservice architecture"
+    ],
+    "weight": 4,
+    "hours": 35,
+    "category": "Backend",
+    "resource": "https://microservices.io/"
+  },
+  "authentication": {
+    "aliases": [
+      "auth",
+      "user authentication"
+    ],
+    "weight": 3,
+    "hours": 12,
+    "category": "Backend",
+    "resource": "https://cheatsheetseries.owasp.org/"
+  },
+  "oauth": {
+    "aliases": [
+      "oauth 2.0",
+      "openid connect"
+    ],
+    "weight": 3,
+    "hours": 15,
+    "category": "Backend",
+    "resource": "https://oauth.net/2/"
+  },
+  "redis": {
+    "aliases": [
+      "redis"
+    ],
+    "weight": 3,
+    "hours": 12,
+    "category": "Database",
+    "resource": "https://redis.io/docs/latest/"
+  },
+  "sqlite": {
+    "aliases": [
+      "sqlite"
+    ],
+    "weight": 2,
+    "hours": 8,
+    "category": "Database",
+    "resource": "https://www.sqlite.org/docs.html"
+  },
+  "oracle database": {
+    "aliases": [
+      "oracle sql",
+      "oracle db"
+    ],
+    "weight": 3,
+    "hours": 25,
+    "category": "Database",
+    "resource": "https://docs.oracle.com/en/database/"
+  },
+  "sql server": {
+    "aliases": [
+      "microsoft sql server",
+      "mssql"
+    ],
+    "weight": 3,
+    "hours": 20,
+    "category": "Database",
+    "resource": "https://learn.microsoft.com/en-us/sql/"
+  },
+  "database design": {
+    "aliases": [
+      "database modelling",
+      "data modeling"
+    ],
+    "weight": 3,
+    "hours": 20,
+    "category": "Database",
+    "resource": "https://www.postgresql.org/docs/current/ddl.html"
+  },
+  "database normalization": {
+    "aliases": [
+      "normalization"
+    ],
+    "weight": 2,
+    "hours": 8,
+    "category": "Database",
+    "resource": "https://www.ibm.com/docs/en/db2"
+  },
+  "data visualization": {
+    "aliases": [
+      "data viz",
+      "visualization"
+    ],
+    "weight": 3,
+    "hours": 18,
+    "category": "Data",
+    "resource": "https://www.tableau.com/learn"
+  },
+  "tableau": {
+    "aliases": [
+      "tableau"
+    ],
+    "weight": 3,
+    "hours": 20,
+    "category": "Data",
+    "resource": "https://www.tableau.com/learn/training"
+  },
+  "power bi": {
+    "aliases": [
+      "powerbi",
+      "microsoft power bi"
+    ],
+    "weight": 3,
+    "hours": 20,
+    "category": "Data",
+    "resource": "https://learn.microsoft.com/en-us/power-bi/"
+  },
+  "excel": {
+    "aliases": [
+      "microsoft excel",
+      "spreadsheets"
+    ],
+    "weight": 2,
+    "hours": 12,
+    "category": "Data",
+    "resource": "https://support.microsoft.com/excel"
+  },
+  "statistics": {
+    "aliases": [
+      "statistical analysis",
+      "probability and statistics"
+    ],
+    "weight": 4,
+    "hours": 30,
+    "category": "Data",
+    "resource": "https://www.khanacademy.org/math/statistics-probability"
+  },
+  "data cleaning": {
+    "aliases": [
+      "data wrangling",
+      "data preprocessing"
+    ],
+    "weight": 3,
+    "hours": 15,
+    "category": "Data",
+    "resource": "https://pandas.pydata.org/docs/user_guide/missing_data.html"
+  },
+  "exploratory data analysis": {
+    "aliases": [
+      "eda"
+    ],
+    "weight": 3,
+    "hours": 15,
+    "category": "Data",
+    "resource": "https://www.kaggle.com/learn"
+  },
+  "feature engineering": {
+    "aliases": [
+      "feature extraction"
+    ],
+    "weight": 4,
+    "hours": 20,
+    "category": "AI/ML",
+    "resource": "https://scikit-learn.org/stable/modules/preprocessing.html"
+  },
+  "model evaluation": {
+    "aliases": [
+      "model validation",
+      "cross validation"
+    ],
+    "weight": 3,
+    "hours": 15,
+    "category": "AI/ML",
+    "resource": "https://scikit-learn.org/stable/modules/model_evaluation.html"
+  },
+  "computer vision": {
+    "aliases": [
+      "cv",
+      "image processing"
+    ],
+    "weight": 4,
+    "hours": 35,
+    "category": "AI/ML",
+    "resource": "https://opencv.org/"
+  },
+  "opencv": {
+    "aliases": [
+      "open cv"
+    ],
+    "weight": 3,
+    "hours": 20,
+    "category": "AI/ML",
+    "resource": "https://docs.opencv.org/"
+  },
+  "transformers": {
+    "aliases": [
+      "transformer models",
+      "hugging face transformers"
+    ],
+    "weight": 4,
+    "hours": 35,
+    "category": "AI/ML",
+    "resource": "https://huggingface.co/docs/transformers"
+  },
+  "generative ai": {
+    "aliases": [
+      "genai",
+      "generative artificial intelligence"
+    ],
+    "weight": 4,
+    "hours": 30,
+    "category": "AI/ML",
+    "resource": "https://www.deeplearning.ai/"
+  },
+  "large language models": {
+    "aliases": [
+      "llm",
+      "llms"
+    ],
+    "weight": 4,
+    "hours": 30,
+    "category": "AI/ML",
+    "resource": "https://huggingface.co/learn"
+  },
+  "retrieval augmented generation": {
+    "aliases": [
+      "rag"
+    ],
+    "weight": 4,
+    "hours": 25,
+    "category": "AI/ML",
+    "resource": "https://www.deeplearning.ai/"
+  },
+  "prompt engineering": {
+    "aliases": [
+      "prompt design"
+    ],
+    "weight": 2,
+    "hours": 8,
+    "category": "AI/ML",
+    "resource": "https://platform.openai.com/docs/guides/prompt-engineering"
+  },
+  "recommendation systems": {
+    "aliases": [
+      "recommender systems"
+    ],
+    "weight": 3,
+    "hours": 25,
+    "category": "AI/ML",
+    "resource": "https://developers.google.com/machine-learning/recommendation"
+  },
+  "time series analysis": {
+    "aliases": [
+      "time series forecasting"
+    ],
+    "weight": 3,
+    "hours": 25,
+    "category": "Data",
+    "resource": "https://www.statsmodels.org/"
+  },
+  "data science": {
+    "aliases": [
+      "data scientist"
+    ],
+    "weight": 4,
+    "hours": 45,
+    "category": "Data",
+    "resource": "https://www.kaggle.com/learn"
+  },
+  "pytorch": {
+    "aliases": [
+      "torch"
+    ],
+    "weight": 4,
+    "hours": 40,
+    "category": "AI/ML",
+    "resource": "https://pytorch.org/tutorials/"
+  },
+  "tensorflow": {
+    "aliases": [
+      "tf"
+    ],
+    "weight": 4,
+    "hours": 40,
+    "category": "AI/ML",
+    "resource": "https://www.tensorflow.org/tutorials"
+  },
+  "keras": {
+    "aliases": [
+      "keras api"
+    ],
+    "weight": 3,
+    "hours": 20,
+    "category": "AI/ML",
+    "resource": "https://keras.io/guides/"
+  },
+  "scipy": {
+    "aliases": [
+      "scientific python"
+    ],
+    "weight": 2,
+    "hours": 15,
+    "category": "Data",
+    "resource": "https://docs.scipy.org/doc/scipy/tutorial/"
+  },
+  "jupyter": {
+    "aliases": [
+      "jupyter notebook",
+      "notebooks"
+    ],
+    "weight": 2,
+    "hours": 8,
+    "category": "Data",
+    "resource": "https://docs.jupyter.org/"
+  },
+  "kaggle": {
+    "aliases": [
+      "kaggle competitions"
+    ],
+    "weight": 2,
+    "hours": 8,
+    "category": "Tools",
+    "resource": "https://www.kaggle.com/learn"
+  },
+  "android development": {
+    "aliases": [
+      "android"
+    ],
+    "weight": 4,
+    "hours": 40,
+    "category": "Mobile",
+    "resource": "https://developer.android.com/courses"
+  },
+  "ios development": {
+    "aliases": [
+      "ios"
+    ],
+    "weight": 4,
+    "hours": 45,
+    "category": "Mobile",
+    "resource": "https://developer.apple.com/tutorials/"
+  },
+  "react native": {
+    "aliases": [
+      "react-native"
+    ],
+    "weight": 4,
+    "hours": 35,
+    "category": "Mobile",
+    "resource": "https://reactnative.dev/docs/getting-started"
+  },
+  "flutter": {
+    "aliases": [
+      "flutter"
+    ],
+    "weight": 4,
+    "hours": 35,
+    "category": "Mobile",
+    "resource": "https://docs.flutter.dev/"
+  },
+  "dart": {
+    "aliases": [
+      "dart language"
+    ],
+    "weight": 3,
+    "hours": 25,
+    "category": "Mobile",
+    "resource": "https://dart.dev/learn"
+  },
+  "jetpack compose": {
+    "aliases": [
+      "android compose"
+    ],
+    "weight": 3,
+    "hours": 25,
+    "category": "Mobile",
+    "resource": "https://developer.android.com/compose"
+  },
+  "swiftui": {
+    "aliases": [
+      "swift ui"
+    ],
+    "weight": 3,
+    "hours": 25,
+    "category": "Mobile",
+    "resource": "https://developer.apple.com/tutorials/swiftui"
+  },
+  "mobile app testing": {
+    "aliases": [
+      "app testing"
+    ],
+    "weight": 2,
+    "hours": 15,
+    "category": "Mobile",
+    "resource": "https://developer.android.com/training/testing"
+  },
+  "cybersecurity": {
+    "aliases": [
+      "information security",
+      "infosec"
+    ],
+    "weight": 4,
+    "hours": 40,
+    "category": "Cybersecurity",
+    "resource": "https://www.cisa.gov/cybersecurity"
+  },
+  "network security": {
+    "aliases": [
+      "cyber network security"
+    ],
+    "weight": 4,
+    "hours": 30,
+    "category": "Cybersecurity",
+    "resource": "https://www.cloudflare.com/learning/security/"
+  },
+  "cryptography": {
+    "aliases": [
+      "encryption",
+      "cryptographic algorithms"
+    ],
+    "weight": 4,
+    "hours": 35,
+    "category": "Cybersecurity",
+    "resource": "https://cryptography.io/en/latest/"
+  },
+  "ethical hacking": {
+    "aliases": [
+      "penetration testing",
+      "pentesting"
+    ],
+    "weight": 4,
+    "hours": 40,
+    "category": "Cybersecurity",
+    "resource": "https://www.kali.org/docs/"
+  },
+  "owasp": {
+    "aliases": [
+      "owasp top 10"
+    ],
+    "weight": 3,
+    "hours": 15,
+    "category": "Cybersecurity",
+    "resource": "https://owasp.org/www-project-top-ten/"
+  },
+  "secure coding": {
+    "aliases": [
+      "secure software development"
+    ],
+    "weight": 3,
+    "hours": 20,
+    "category": "Cybersecurity",
+    "resource": "https://owasp.org/www-project-secure-coding-practices-quick-reference-guide/"
+  },
+  "vulnerability assessment": {
+    "aliases": [
+      "vulnerability scanning"
+    ],
+    "weight": 3,
+    "hours": 20,
+    "category": "Cybersecurity",
+    "resource": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
+  },
+  "incident response": {
+    "aliases": [
+      "security incident handling"
+    ],
+    "weight": 3,
+    "hours": 20,
+    "category": "Cybersecurity",
+    "resource": "https://www.cisa.gov/"
+  },
+  "firewalls": {
+    "aliases": [
+      "firewall configuration"
+    ],
+    "weight": 3,
+    "hours": 12,
+    "category": "Cybersecurity",
+    "resource": "https://www.cloudflare.com/learning/security/what-is-a-firewall/"
+  },
+  "penetration testing tools": {
+    "aliases": [
+      "burp suite",
+      "nmap"
+    ],
+    "weight": 3,
+    "hours": 20,
+    "category": "Cybersecurity",
+    "resource": "https://portswigger.net/web-security"
+  },
+  "google cloud": {
+    "aliases": [
+      "gcp",
+      "google cloud platform"
+    ],
+    "weight": 3,
+    "hours": 30,
+    "category": "Cloud",
+    "resource": "https://cloud.google.com/docs"
+  },
+  "microsoft azure": {
+    "aliases": [
+      "azure cloud"
+    ],
+    "weight": 3,
+    "hours": 30,
+    "category": "Cloud",
+    "resource": "https://learn.microsoft.com/en-us/azure/"
+  },
+  "terraform": {
+    "aliases": [
+      "infrastructure as code",
+      "iac"
+    ],
+    "weight": 4,
+    "hours": 25,
+    "category": "Cloud",
+    "resource": "https://developer.hashicorp.com/terraform/tutorials"
+  },
+  "serverless": {
+    "aliases": [
+      "serverless computing",
+      "aws lambda"
+    ],
+    "weight": 3,
+    "hours": 20,
+    "category": "Cloud",
+    "resource": "https://aws.amazon.com/serverless/"
+  },
+  "cloud computing": {
+    "aliases": [
+      "cloud architecture"
+    ],
+    "weight": 4,
+    "hours": 25,
+    "category": "Cloud",
+    "resource": "https://aws.amazon.com/what-is-cloud-computing/"
+  },
+  "cloud security": {
+    "aliases": [
+      "cloud security posture"
+    ],
+    "weight": 4,
+    "hours": 25,
+    "category": "Cloud",
+    "resource": "https://cloud.google.com/security"
+  },
+  "ansible": {
+    "aliases": [
+      "ansible automation"
+    ],
+    "weight": 3,
+    "hours": 18,
+    "category": "DevOps",
+    "resource": "https://docs.ansible.com/"
+  },
+  "jenkins": {
+    "aliases": [
+      "jenkins pipeline"
+    ],
+    "weight": 3,
+    "hours": 15,
+    "category": "DevOps",
+    "resource": "https://www.jenkins.io/doc/"
+  },
+  "github actions": {
+    "aliases": [
+      "actions workflows"
+    ],
+    "weight": 3,
+    "hours": 10,
+    "category": "DevOps",
+    "resource": "https://docs.github.com/en/actions"
+  },
+  "monitoring": {
+    "aliases": [
+      "observability",
+      "application monitoring"
+    ],
+    "weight": 3,
+    "hours": 15,
+    "category": "DevOps",
+    "resource": "https://prometheus.io/docs/introduction/overview/"
+  },
+  "prometheus": {
+    "aliases": [
+      "prometheus monitoring"
+    ],
+    "weight": 2,
+    "hours": 15,
+    "category": "DevOps",
+    "resource": "https://prometheus.io/docs/"
+  },
+  "grafana": {
+    "aliases": [
+      "grafana dashboards"
+    ],
+    "weight": 2,
+    "hours": 12,
+    "category": "DevOps",
+    "resource": "https://grafana.com/docs/"
+  },
+  "nginx": {
+    "aliases": [
+      "nginx"
+    ],
+    "weight": 2,
+    "hours": 12,
+    "category": "DevOps",
+    "resource": "https://nginx.org/en/docs/"
+  },
+  "pytest": {
+    "aliases": [
+      "python pytest"
+    ],
+    "weight": 3,
+    "hours": 8,
+    "category": "Testing",
+    "resource": "https://docs.pytest.org/"
+  },
+  "jest": {
+    "aliases": [
+      "javascript jest"
+    ],
+    "weight": 2,
+    "hours": 8,
+    "category": "Testing",
+    "resource": "https://jestjs.io/docs/getting-started"
+  },
+  "selenium": {
+    "aliases": [
+      "selenium webdriver"
+    ],
+    "weight": 3,
+    "hours": 18,
+    "category": "Testing",
+    "resource": "https://www.selenium.dev/documentation/"
+  },
+  "cypress": {
+    "aliases": [
+      "cypress testing"
+    ],
+    "weight": 3,
+    "hours": 15,
+    "category": "Testing",
+    "resource": "https://docs.cypress.io/"
+  },
+  "playwright": {
+    "aliases": [
+      "playwright testing"
+    ],
+    "weight": 3,
+    "hours": 15,
+    "category": "Testing",
+    "resource": "https://playwright.dev/docs/intro"
+  },
+  "postman": {
+    "aliases": [
+      "api testing"
+    ],
+    "weight": 3,
+    "hours": 8,
+    "category": "Testing",
+    "resource": "https://learning.postman.com/docs/introduction/overview/"
+  },
+  "integration testing": {
+    "aliases": [
+      "integration tests"
+    ],
+    "weight": 3,
+    "hours": 12,
+    "category": "Testing",
+    "resource": "https://martinfowler.com/articles/practical-test-pyramid.html"
+  },
+  "performance testing": {
+    "aliases": [
+      "load testing",
+      "stress testing"
+    ],
+    "weight": 3,
+    "hours": 18,
+    "category": "Testing",
+    "resource": "https://grafana.com/docs/k6/latest/"
+  },
+  "test automation": {
+    "aliases": [
+      "automated test scripts"
+    ],
+    "weight": 3,
+    "hours": 18,
+    "category": "Testing",
+    "resource": "https://www.selenium.dev/documentation/"
+  },
+  "bug tracking": {
+    "aliases": [
+      "issue tracking"
+    ],
+    "weight": 2,
+    "hours": 8,
+    "category": "Practices",
+    "resource": "https://www.atlassian.com/software/jira/guides"
+  },
+  "system design": {
+    "aliases": [
+      "software architecture"
+    ],
+    "weight": 4,
+    "hours": 35,
+    "category": "CS Fundamentals",
+    "resource": "https://github.com/donnemartin/system-design-primer"
+  },
+  "computer networks": {
+    "aliases": [
+      "networking fundamentals"
+    ],
+    "weight": 3,
+    "hours": 20,
+    "category": "CS Fundamentals",
+    "resource": "https://developer.mozilla.org/en-US/docs/Learn/Common_questions/Web_mechanics/How_does_the_Internet_work"
+  },
+  "operating systems": {
+    "aliases": [
+      "os concepts"
+    ],
+    "weight": 3,
+    "hours": 25,
+    "category": "CS Fundamentals",
+    "resource": "https://pages.cs.wisc.edu/~remzi/OSTEP/"
+  },
+  "compiler design": {
+    "aliases": [
+      "compilers"
+    ],
+    "weight": 2,
+    "hours": 35,
+    "category": "CS Fundamentals",
+    "resource": "https://craftinginterpreters.com/"
+  },
+  "distributed systems": {
+    "aliases": [
+      "distributed computing"
+    ],
+    "weight": 4,
+    "hours": 35,
+    "category": "CS Fundamentals",
+    "resource": "https://www.distributed-systems.net/index.php/books/ds3/"
+  },
+  "data structures": {
+    "aliases": [
+      "data structure"
+    ],
+    "weight": 3,
+    "hours": 30,
+    "category": "CS Fundamentals",
+    "resource": "https://www.geeksforgeeks.org/data-structures/"
+  },
+  "design patterns": {
+    "aliases": [
+      "software design patterns"
+    ],
+    "weight": 3,
+    "hours": 18,
+    "category": "CS Fundamentals",
+    "resource": "https://refactoring.guru/design-patterns"
+  },
+  "debugging": {
+    "aliases": [
+      "debugging skills"
+    ],
+    "weight": 3,
+    "hours": 10,
+    "category": "Practices",
+    "resource": "https://code.visualstudio.com/docs/editor/debugging"
+  },
+  "technical writing": {
+    "aliases": [
+      "documentation writing"
+    ],
+    "weight": 2,
+    "hours": 10,
+    "category": "Soft Skills",
+    "resource": "https://developers.google.com/tech-writing"
+  },
+  "teamwork": {
+    "aliases": [
+      "collaboration",
+      "team collaboration"
+    ],
+    "weight": 2,
+    "hours": 8,
+    "category": "Soft Skills",
+    "resource": "https://www.atlassian.com/team-playbook"
+  },
+  "leadership": {
+    "aliases": [
+      "team leadership"
+    ],
+    "weight": 2,
+    "hours": 12,
+    "category": "Soft Skills",
+    "resource": "https://www.coursera.org/learn/leadership"
+  },
+  "time management": {
+    "aliases": [
+      "prioritization"
+    ],
+    "weight": 2,
+    "hours": 8,
+    "category": "Soft Skills",
+    "resource": "https://www.atlassian.com/blog/productivity/time-management"
+  },
+  "critical thinking": {
+    "aliases": [
+      "critical analysis"
+    ],
+    "weight": 3,
+    "hours": 12,
+    "category": "Soft Skills",
+    "resource": "https://www.skillsyouneed.com/learn/critical-thinking.html"
+  },
+  "presentation skills": {
+    "aliases": [
+      "public speaking"
+    ],
+    "weight": 2,
+    "hours": 8,
+    "category": "Soft Skills",
+    "resource": "https://www.toastmasters.org/resources/public-speaking-tips"
   }
 }
