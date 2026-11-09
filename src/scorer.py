@@ -144,6 +144,26 @@ def analyze(resume_text: str, jd_text: str) -> dict:
     )
     skill_score = achieved_weight / total_skill_weight * 100 if total_skill_weight else 0.0
 
+    # Category-level skill coverage for the frontend radar chart.
+    # Uses the same required/preferred weighting and proficiency credit as
+    # the overall skill score; categories absent from the JD are omitted.
+    category_totals = {}
+    category_achieved = {}
+    for skill, priority in jd_skills.items():
+        category = catalogue[skill]["category"]
+        weighted = catalogue[skill]["weight"] * priority
+        category_totals[category] = category_totals.get(category, 0.0) + weighted
+        level = resume_skill_levels.get(skill, {}).get("level")
+        credit = proficiency_credit.get(level, 0.0)
+        category_achieved[category] = (
+            category_achieved.get(category, 0.0) + weighted * credit
+        )
+    categories = {
+        category: round(category_achieved[category] / total * 100, 1)
+        for category, total in category_totals.items()
+        if total > 0
+    }
+
     semantic = semantic_similarity(resume_clean, jd_clean)
 
     required_years = _required_years(jd_text)
@@ -196,6 +216,7 @@ def analyze(resume_text: str, jd_text: str) -> dict:
 
     return {
         "overall": round(float(overall), 1),
+        "categories": categories,
         "breakdown": {
             "skills": round(float(skill_score), 1),
             "semantic": semantic["score"],
