@@ -38,7 +38,7 @@ An explainable, privacy-conscious web application that analyzes a resume against
 - **Theme and interaction polish:** Supports dark/light theme switching, responsive styling, and a score celebration animation for compatibility scores of 75% or higher.
 - **PDF report:** Generates a downloadable analysis report.
 - **REST API:** Supports resume analysis through JSON endpoints.
-- **Input validation:** Includes PDF validation, upload-size restrictions, and a 50-page limit.
+- **Input validation:** Includes PDF validation, a configurable request-size limit (5 MB by default), job-description length restrictions, and a 50-page PDF limit.
 - **Automated testing:** Includes Pytest tests for core functionality and application routes.
 
 ## Technology Stack
