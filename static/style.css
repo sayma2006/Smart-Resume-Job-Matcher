@@ -50,3 +50,12 @@ body.dark .loader-card{background:#182238;color:#edf2fa;border-color:#344158}bod
 #radarEmpty{text-align:center;padding:24px 0}
 body.dark .radar-panel{background:var(--surface)}
 @media(max-width:560px){.radar-chart-wrap{height:300px}}
+
+/* UI polish: consistent hover/focus transitions and score celebration. */
+.panel,.primary-btn,.secondary-btn,.theme-toggle,.dropzone,.chip,.gap-item,.suggestion,.profile-row{transition:background-color .22s ease,border-color .22s ease,box-shadow .22s ease,color .22s ease,transform .22s ease}
+.panel:hover{box-shadow:0 16px 42px rgba(24,39,75,.10)}
+.secondary-btn:hover{transform:translateY(-1px);box-shadow:0 5px 14px rgba(154,84,21,.12)}
+.theme-toggle:hover{background:rgba(255,255,255,.12);transform:rotate(12deg)}
+:focus-visible{outline:3px solid rgba(242,140,40,.55);outline-offset:3px}
+.confetti-canvas{position:fixed;inset:0;z-index:2000;pointer-events:none}
+@media(prefers-reduced-motion:reduce){.panel,.primary-btn,.secondary-btn,.theme-toggle,.dropzone,.chip,.gap-item,.suggestion,.profile-row{transition:none!important}}
