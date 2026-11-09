@@ -126,6 +126,42 @@ function makeText(tag, className, text) {
   return element;
 }
 
+function launchConfetti() {
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  const canvas = document.createElement('canvas');
+  canvas.className = 'confetti-canvas';
+  canvas.setAttribute('aria-hidden', 'true');
+  document.body.appendChild(canvas);
+  const context = canvas.getContext('2d');
+  if (!context) { canvas.remove(); return; }
+  const ratio = Math.min(window.devicePixelRatio || 1, 2);
+  const resize = () => {
+    canvas.width = window.innerWidth * ratio; canvas.height = window.innerHeight * ratio;
+    canvas.style.width = window.innerWidth + 'px'; canvas.style.height = window.innerHeight + 'px';
+    context.setTransform(ratio, 0, 0, ratio, 0, 0);
+  };
+  resize();
+  const colors = ['#f28c28', '#f6c453', '#16a34a', '#6383bc', '#e879a5'];
+  const particles = Array.from({length:110}, () => ({
+    x:Math.random()*window.innerWidth, y:-20-Math.random()*window.innerHeight*.45,
+    width:5+Math.random()*5, height:7+Math.random()*7, speed:2.2+Math.random()*3.5,
+    drift:(Math.random()-.5)*2.4, rotation:Math.random()*Math.PI, spin:(Math.random()-.5)*.16,
+    color:colors[Math.floor(Math.random()*colors.length)]
+  }));
+  let frame = 0;
+  function animate() {
+    context.clearRect(0,0,window.innerWidth,window.innerHeight);
+    particles.forEach(p => {
+      p.y += p.speed; p.x += p.drift; p.rotation += p.spin;
+      context.save(); context.translate(p.x,p.y); context.rotate(p.rotation);
+      context.fillStyle=p.color; context.fillRect(-p.width/2,-p.height/2,p.width,p.height); context.restore();
+    });
+    frame++;
+    if(frame<150 && particles.some(p=>p.y<window.innerHeight+20)) requestAnimationFrame(animate);
+    else canvas.remove();
+  }
+  requestAnimationFrame(animate);
+}
 function renderResults(result) {
   document.getElementById("results").classList.remove("hidden");
   document.getElementById("results").classList.add("results-enter");
@@ -151,6 +187,7 @@ function renderResults(result) {
   renderQuality(result.resume_quality || []);
   renderProfile(result.years, result.education);
   document.getElementById("results").scrollIntoView({ behavior: "smooth" });
+  if (result.overall >= 75) launchConfetti();
 }
 
 function drawGauge(value) {
