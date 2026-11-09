@@ -89,6 +89,17 @@
 
       <div id="warnings" class="notice-list"></div>
 
+      <article class="panel radar-panel">
+        <div class="panel-heading">
+          <div><h3>Skill category coverage</h3><p class="muted small">How your demonstrated skills align across the job's skill categories.</p></div>
+          <span class="sim-badge">0–100%</span>
+        </div>
+        <div class="radar-chart-wrap">
+          <canvas id="categoryRadarChart" role="img" aria-label="Radar chart showing skill coverage by job category"></canvas>
+        </div>
+        <p id="radarEmpty" class="muted small hidden">No categorized skills were detected in this job description.</p>
+      </article>
+
       <div class="content-grid">
         <article class="panel">
           <div class="panel-heading"><h3>Matched skills</h3><span id="matchedCount" class="count-pill">0</span></div>

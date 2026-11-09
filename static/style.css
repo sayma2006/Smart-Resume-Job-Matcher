@@ -41,3 +41,12 @@ body.dark .loader-card{background:#182238;color:#edf2fa;border-color:#344158}bod
 
 .form-actions{display:flex;align-items:center;gap:10px}.evidence-item{display:inline-block}.evidence-item summary{cursor:pointer;list-style:none}.evidence-item summary::-webkit-details-marker{display:none}.evidence-text{max-width:270px;margin:7px 0 0;padding:9px 11px;border:1px solid var(--line);border-radius:9px;background:var(--surface);color:var(--muted);font-size:11px;line-height:1.5}.gap-item{border-left:2px solid #d56b62;padding-left:12px}.gap-item .gap-name{color:var(--red)}.dropzone:focus-within{outline:3px solid rgba(228,154,67,.25);outline-offset:3px}
 @media(max-width:560px){.form-actions{width:100%;flex-direction:column-reverse;align-items:stretch}.form-actions button{width:100%}}
+
+
+/* Skill-category radar chart */
+.radar-panel{margin-top:18px}
+.radar-chart-wrap{position:relative;width:100%;max-width:680px;height:360px;margin:8px auto 0}
+.radar-chart-wrap canvas{max-width:100%;max-height:100%}
+#radarEmpty{text-align:center;padding:24px 0}
+body.dark .radar-panel{background:var(--surface)}
+@media(max-width:560px){.radar-chart-wrap{height:300px}}
