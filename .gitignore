@@ -22,3 +22,13 @@ dist/
 
 # Local application data
 instance/
+
+# Legacy v1 files (kept locally, excluded from v2)
+data/job_description.txt
+data/sample_resume.pdf
+src/job_reader.py
+src/nlp_matcher.py
+src/pdf_extractor.py
+src/skill_matcher.py
+src/skills.py
+src/text_preprocessor.py
