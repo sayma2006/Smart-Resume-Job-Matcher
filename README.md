@@ -22,7 +22,7 @@ An explainable, privacy-conscious web application that analyzes a resume against
 
 - **Resume analysis:** Extracts text from PDF resumes directly from an in-memory upload stream.
 - **Privacy-conscious processing:** Uploaded resumes are not saved to disk.
-- **Skill extraction:** Identifies technical skills using a catalogue of canonical names, aliases, categories, importance weights, and learning resources.
+- **Skill extraction:** Identifies skills using a catalogue of 158 canonical entries with aliases, categories, importance weights, and learning resources. The catalogue spans programming, web, data, AI/ML, mobile, cybersecurity, cloud, testing, DevOps, databases, and more.
 - **Boundary-aware detection:** Distinguishes similar skill names such as Java and JavaScript, C and C++, C#, Node.js, CI/CD, and .NET.
 - **Requirement analysis:** Identifies required and preferred skills in job descriptions.
 - **Weighted skill matching:** Calculates skill coverage based on skill importance and requirement priority.
@@ -34,7 +34,8 @@ An explainable, privacy-conscious web application that analyzes a resume against
 - **Learning roadmap:** Recommends prioritized skill improvements.
 - **What-if simulator:** Illustrates how adding skills could affect the estimated compatibility score.
 - **Resume quality suggestions:** Provides recommendations for improving resume structure.
-- **Visual dashboard:** Includes score breakdowns, charts, and an animated results presentation.
+- **Visual dashboard:** Includes score breakdowns, a category-level skill coverage radar chart, and an animated results presentation.
+- **Theme and interaction polish:** Supports dark/light theme switching, responsive styling, and a score celebration animation for compatibility scores of 75% or higher.
 - **PDF report:** Generates a downloadable analysis report.
 - **REST API:** Supports resume analysis through JSON endpoints.
 - **Input validation:** Includes PDF validation, upload-size restrictions, and a 50-page limit.
@@ -236,6 +237,7 @@ The application provides two resume-analysis endpoints:
 
 - `POST /api/analyze`
 - `POST /analyze`
+- `POST /download-report` (returns a generated PDF report)
 
 Both endpoints accept `multipart/form-data`.
 
@@ -299,7 +301,7 @@ Privacy-conscious processing is an important design consideration.
 
 ## Evaluation
 
-The `evaluation/evaluation_template.csv` file contains column headers only. It does not include fabricated labelled examples.
+The `evaluation/evaluation_template.csv` file contains the required column headers and one instructional placeholder row. Replace that placeholder with your own anonymized, human-reviewed example pairs before running an evaluation; it is not a validated benchmark dataset.
 
 To evaluate the scoring approach, create an anonymized CSV containing the following columns:
 
